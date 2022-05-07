@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="icon" type="image/png" href="{{ .DocumentRoot }}/static/img/favicon.ico" />
-    <link rel="stylesheet" href="{{ .DocumentRoot }}/static/css/main.css" />
-    <meta name="robots" content="noindex, nofollow" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=7"
-    />
-    <title>Vouch Proxy - {{ .Msg }}</title>
-  </head>
-  <body>
-<div class="top">
-  <a href="https://github.com/vouch/vouch-proxy"><img src="{{ .DocumentRoot }}/static/img/multicolor_V_500x500.png"/></a>
-  <a href="https://github.com/vouch/vouch-proxy"><span>Vouch Proxy</span></a>
+<head>
+<title>SEA9.ORG - {{ .Msg }}</title>
+<meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=7" />
+<link rel="icon" type="image/png" href="/favicon.ico" />
+<link rel="stylesheet" href="/_main.css" />
+<style type="text/css">
+.bkgd {
+  background-image: url("/_background.jpg");
+  background-position: top;
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+}
+</style>
+</head>
+<body class="bkgd">
+<div id="header">
+<img src="/_logo.png" alt="SEA9"/></a>
+<div id="title">SEA9.ORG</div>
 </div>
-
-<div class="content">
+<div id="content">
 <h1>{{ .Msg }}</h1>
-
 {{ if .Testing }}
 <p class="test">
 <h2>-- test mode --</h2>
 The config file includes <code>testing: true</code>
 <p/>
 All 302 redirects will be captured and presented as links here
-
-
 <ul>
   <li><a href="{{ .DocumentRoot }}/login">login</a></li>
   <li><a href="{{ .DocumentRoot }}/logout">logout</a></li>
@@ -40,12 +41,21 @@ All 302 redirects will be captured and presented as links here
 {{ end }}
 </ul>
 {{ end }}
-<div class="bottom">
-For support, please contact your network administrator or whomever configured Nginx to use Vouch Proxy.
-<p/>
-For help with <a href="https://github.com/vouch/vouch-proxy">Vouch Proxy</a> or to file a bug report, please visit <a href="https://github.com/vouch/vouch-proxy">https://github.com/vouch/vouch-proxy</a>
-<p/>
 </div>
+<div id="footer">
+<hr>
+<div><img src="/_copyright.png" alt=""/><p>&copy; 2022 sea9.org</p></div>
+<p>
+This is our personal website and is not intended for any business ues, everything you found here
+is for the purpose of sharing of our interests only. All artworks found here are created by us,
+some of them are intended to be 'fan-arts', and we do not gain from any of them financially.
+</p>
+<p>
+We disclaim any liability in connection with the use of artworks, software, information, or anything
+else found on this site. Hyper-links provided here are for informational purposes only and do not
+constitute endorsement of any of these sites. And we have no relationship at all with those
+linked organizations. Thank you for your understanding.
+</p>
 </div>
-  </body>
+</body>
 </html>
